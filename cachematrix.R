@@ -10,8 +10,7 @@ set<-function(y){
   inv<<-null
 }
 get<-function() x
-inver<-solve(x)
-inverse<-function(inver) inv<<-inver
+inverse<-function(solve) inv<<-solve
 get_inverse<-function() inv
 list(get=get, set=set,
      inverse=inverse,
@@ -29,7 +28,7 @@ if(!is.null(inv)){
   return(inv)
 }
 data<-x$get()
-inv<- solve(x)
+inv<- solve(x,...)
 x$get_inverse(inv)
 inv
 }
