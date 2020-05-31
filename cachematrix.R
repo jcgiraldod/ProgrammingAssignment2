@@ -13,7 +13,7 @@ get<-function() x
 inver<-solve(x)
 inverse<-function(inver) inv<<-inver
 get_inverse<-function() inv
-list(inverse=inverse, get_inverse=get_inverse,
+list(get=get, set=set,
      inverse=inverse,
      get_inverse=get_inverse)
 }
